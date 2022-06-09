@@ -12,23 +12,14 @@
   --line-height: 1.7;
   --p-font-size: 13px;
   --transition: 0.3s;
+  --section-padding: 60px;
 }
 
 html {
+  position: relative;
   scroll-behavior: smooth;
 }
-
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  background-image: url(../imgs/2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-  color: white;
-}
-body::before {
+html::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -36,6 +27,16 @@ body::before {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+  background-image: url(../imgs/1.jpg);
 }
 
 a {
@@ -87,6 +88,7 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: transparent;
 }
 .landing .container .box {
   max-width: 650px;
@@ -181,3 +183,20 @@ ul {
   }
 }
 /* End Landing */
+/* Start About  */
+.about {
+}
+.about .container {
+}
+@media (max-width: 767px) {
+  .about .container {
+    padding-top: 60px;
+  }
+}
+.about .container .holder {
+  background-color: rgba(0, 0, 0, 0.749);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  padding-left: 30px;
+}
+/* End About  */
