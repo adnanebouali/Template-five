@@ -396,22 +396,14 @@ ul {
   text-align: center;
 }
 .services .container .services-info .box svg {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   fill: var(--h-color);
   margin-right: 10px;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 .services .container .services-info .box:hover svg {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
 }
 .services .container .services-info .box span {
   display: block;
@@ -421,24 +413,37 @@ ul {
   color: rgb(190, 190, 190);
 }
 .services .container .services-info .box .title {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 2px;
   font-weight: 600;
   margin-bottom: 2px;
+  margin: 18px 0 6px;
 }
 .services .container .services-info .box .paragraph {
   font-size: 13px;
   letter-spacing: var(--p-letter-spacing);
   font-weight: 300;
   text-transform: capitalize;
+  color: var(--p-color);
 }
 @media (max-width: 767px) {
   .services .container .services-info {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    position: relative;
-    left: -5px;
+  }
+  .services .container .services-info .box {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .services .container .services-info .box .title {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .services .container .services-info .box svg {
+    align-self: flex-start;
+    margin-bottom: 10px;
   }
 }
 /* End services */
