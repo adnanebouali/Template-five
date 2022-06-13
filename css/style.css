@@ -375,3 +375,70 @@ ul {
 }
 
 /* End About  */
+/* start services */
+.services {
+  margin-top: 40px;
+}
+.services .container .services-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.services .container .services-info .box {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  text-align: center;
+}
+.services .container .services-info .box svg {
+  width: 35px;
+  height: 35px;
+  fill: var(--h-color);
+  margin-right: 10px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.services .container .services-info .box:hover svg {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.services .container .services-info .box span {
+  display: block;
+  transition: var(--transition);
+}
+.services .container .services-info .box:hover span {
+  color: rgb(190, 190, 190);
+}
+.services .container .services-info .box .title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.services .container .services-info .box .paragraph {
+  font-size: 13px;
+  letter-spacing: var(--p-letter-spacing);
+  font-weight: 300;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .services .container .services-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    left: -5px;
+  }
+}
+/* End services */
