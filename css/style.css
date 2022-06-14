@@ -13,6 +13,7 @@
   --p-font-size: 13px;
   --transition: 0.3s;
   --section-padding: 50px;
+  --layer-background: #afafaf25;
 }
 
 html {
@@ -223,7 +224,7 @@ ul {
   border-right: 1px solid white;
 }
 .landing .container .box ul li a:hover {
-  background-color: #afafaf25;
+  background-color: var(--layer-background);
 }
 @media (max-width: 767px) {
   .landing .container .box ul {
@@ -348,7 +349,7 @@ ul {
   -o-border-radius: 5px;
 }
 .gallery .container .shuffle a:hover {
-  background-color: #afafaf25;
+  background-color: var(--layer-background);
 }
 
 .gallery .container .images {
@@ -447,3 +448,117 @@ ul {
   }
 }
 /* End services */
+/* Start Contact */
+.contact {
+  margin-top: 40px;
+}
+.contact .holder form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.contact .holder form .field:not(.button) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .holder form .field.half {
+  width: calc(50% - 10px);
+}
+@media (max-width: 480px) {
+  .contact .holder form .field.half {
+    width: 100%;
+  }
+}
+.contact .holder form .field label {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--p-color);
+  font-size: 14px;
+  letter-spacing: var(--p-letter-spacing);
+}
+
+.contact .holder form .field input,
+textarea {
+  padding: 13px 15px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid var(--p-color);
+  caret-color: var(--p-color);
+  transition: 0.02s;
+  color: var(--p-color);
+}
+.contact .holder form .field input:focus,
+textarea:focus {
+  outline: none;
+  background-color: var(--layer-background);
+}
+
+.contact .holder form .field textarea {
+  height: 150px;
+}
+.contact .holder form .field.button {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+@media (max-width: 480px) {
+  .contact .holder form .field.button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.contact .holder form .field.button input {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: var(--p-letter-spacing);
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.contact .holder form .field.button input:first-child {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+}
+.contact .holder form .field.button input:first-child:hover {
+  background-color: rgb(226, 226, 226);
+  color: black;
+  font-weight: 500;
+}
+.contact .holder form .field.button input:last-child:hover {
+  background-color: var(--layer-background);
+}
+.contact .holder .social {
+  display: flex;
+  gap: 15px;
+}
+.contact .holder .social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.contact .holder .social a:hover {
+  background-color: var(--layer-background);
+}
+.contact .holder .social svg {
+  width: 22px;
+  height: 25px;
+}
+
+/* End Contact */
