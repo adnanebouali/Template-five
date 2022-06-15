@@ -109,6 +109,31 @@ ul {
   margin-top: 20px;
   color: var(--p-color);
 }
+#myBtn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 99;
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+#myBtn:hover {
+  background-color: var(--layer-background);
+}
+#myBtn svg {
+  width: 22px;
+  height: 22px;
+}
 /* Small */
 @media (min-width: 768px) {
   .container {
