@@ -127,6 +127,12 @@ ul {
   border-radius: 50%;
   transition: var(--transition);
 }
+@media (max-width: 767px) {
+  #myBtn {
+    bottom: 30px;
+    right: 20px;
+  }
+}
 #myBtn:hover {
   background-color: var(--layer-background);
 }
